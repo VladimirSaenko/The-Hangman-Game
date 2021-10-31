@@ -48,7 +48,7 @@ function displayWord() {
 	wordEl.innerHTML = `
 	${selectedWord.split('').map(letter => `
 	<span class="letter">
-	${correctLetters.includes(letter) ? letter : ''}<span/>`
+	${correctLetters.includes(letter) ? letter : ''}</span>`
 	).join('')}`;
 
 	// Add Congratulations
@@ -68,7 +68,7 @@ function displayWord() {
 // Update the wrong letters
 function updateWrongLettersEl() {
 	wrongLettersEl.innerHTML = `
-	${wrongLetters.length > 0 ? '<p>Wrong<p/>' : ''}
+	${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
 	${wrongLetters.map(letter => `<span>${letter}</span>`)}
 	`;
 
@@ -83,7 +83,7 @@ function updateWrongLettersEl() {
 	});
 
 	if(wrongLetters.length === figureParts.length) {
-		finalMessage.innerHTML = 'YOU LOST!';
+		finalMessage.innerHTML = 'You lost,';
 		finalMessageRevealWord.innerHTML = `the word: ${selectedWord}`;
 		popup.style.display = 'flex';
 		playable = false;
