@@ -58,7 +58,7 @@ function displayWord() {
 	// console.log(innerWord);
 	const innerWord = wordEl.innerText.replace(/\n/g, '');
 	if(innerWord === selectedWord) {
-		finalMessage.innerText = `Congratulations!, the word: ${selectedWord}`;
+		finalMessage.innerText = 'Congratulations!';
 		finalMessageRevealWord.innerText = '';
 		popup.style.display = 'flex';
 		playable = false;
